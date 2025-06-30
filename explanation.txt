@@ -1,0 +1,9 @@
+🔹 Summary:
+ An operating system is a program that manages the computer hardware . It also provides a basis for application programs and acts as an intermediary between a user of a computer and the hardware . The primary goal is to make the computer system convenient to use .
+
+📘 Explanation:
+This summary captures the core ideas of the original document.
+The document discusses the following key points:
+ An operating system is a program that manages the computer hardware . It also provides a basis for application programs and acts as an intermediary between a user of a computer and the hardware . The primary goal is to make the computer system convenient to use .
+
+This helps in understanding the main ideas quickly without reading the full document.
