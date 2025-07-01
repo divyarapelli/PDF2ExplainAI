@@ -3,5 +3,3 @@ PyMuPDF
 transformers
 torch
 gTTS
-sentencepiece
-
