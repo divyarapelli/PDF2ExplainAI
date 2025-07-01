@@ -7,9 +7,15 @@ def read_text_file(file_path):
         return file.read()
 
 def summarize_text(text):
-    text = text[:1000]  # Use only first 1000 chars for speed
-    summary = summarizer(text, max_length=150, min_length=50, do_sample=False)[0]['summary_text']
-    return summary
+    max_chunk_size = 800
+    chunks = [text[i:i+max_chunk_size] for i in range(0, len(text), max_chunk_size)]
+    
+    summaries = []
+    for chunk in chunks:
+        summary = summarizer(chunk, max_length=150, min_length=40, do_sample=False)[0]['summary_text']
+        summaries.append(summary)
+    
+    return " ".join(summaries)
 
 def generate_explanation(summary):
     explanation = (
