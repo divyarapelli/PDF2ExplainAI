@@ -1,9 +1,12 @@
 import streamlit as st
 import fitz  # PyMuPDF
 from transformers import pipeline
+import os
+os.environ["TRANSFORMERS_CACHE"] = "/mount/cache"
 
 # Load summarization model
-summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6", device=-1)
+
 
 def extract_text_from_pdf(pdf_file):
     text = ""
